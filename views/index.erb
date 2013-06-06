@@ -1,0 +1,31 @@
+<h1>To-do App</h1>
+<table class="table">
+<tr>
+  <td>Name</td>
+  <td>Description</td>
+  <td>Owner</td>
+  <td>Status</td>
+  <td>Edit</td>
+</tr>
+<% @todos.each do |todo| %>
+  <tr>
+    <td><%= todo.name %></td>
+    <td><%= todo.description %></td>
+    <td><%= todo.owner %></td>
+    <td><form method="post" action="/toggle_todo/<%= todo.id %>"><button class="btn btn-mini
+      <% if todo.status == true %>
+      <%=     "btn-success" %>
+      <%    else %>
+      <%=      "btn-danger" %>
+      <%    end %>
+      ">
+      <% if todo.status == true %>
+      <%= "Finished" %>
+      <% else %>
+      <%= "Unfinished" %>
+      <% end %>
+      </button></form></td>
+    <td><a href="/edit_todo/<%= todo.id %>">Edit</a></td>
+  </tr>
+<% end %>
+</table>

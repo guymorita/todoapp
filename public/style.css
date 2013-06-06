@@ -1,0 +1,43 @@
+html,body {
+  height:100%;
+  font-family: 'Alef', sans-serif;
+}
+
+body {
+  line-height: 1;
+  background:url('http://interfacelift.com/wallpaper/D47cd523/03271_pinksunrise_2880x1800.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#container {
+  width: 960px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.clearfix:after {
+  clear: both;
+  display: block;
+  content: '';
+}
+
+#nav {
+  border-radius: 2px;
+  border: 2px solid gray;
+  padding: 15px;
+  background-color:rgba(145,145,145,0.5);
+  color: white;
+  margin: 10px 0 0 0;
+}
+
+#nav ul a {
+  color: white;
+}
+
+#content {
+  background-color:rgba(99,175,208,0.5);
+  margin: 50px 0 0 0;
+  border: 2px solid gray;
+  padding: 15px;
+  color: white;
+}
